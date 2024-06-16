@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TonConnect</title>
+    <script src="https://unpkg.com/@tonconnect/ui@0.0.9/dist/tonconnect-ui.min.js"></script>
+</head>
+<body>
+    <div id="connect"></div>
+    <button onclick="transaction()">Send TON</button>
+    <script>
+        const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
+            manifestUrl: 'https://github.com/hankgalt1/wallet/blob/main/tonconnect-manifest.json',
+            buttonRootId: 'connect'
+    });
+    async function transaction(){
+        const transaction = {
+            validUntil:Math.round(Date.now()/1000)+10,
+            messages:[
+                {
+                    address:'0:bc8271e3058be5d3da54d4f1d69ff5c0f5053f92fca596c1731fb1b1432f4f14',
+                    amount:'10000000'
+                }
+            ]
+        }
+    };
+    </script>
+    
+</body>
+</html>
