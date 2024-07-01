@@ -14,7 +14,7 @@ export class GameScen extends Phaser.Scene{
     
 //Функция для переменных загрузочного экрана.  
     init(){
-        this.get_user_count()
+        
         console.log('init')
         this.Trak_image = './game_window/'
         // this.user_id = window.Telegram.WebApp.initData
