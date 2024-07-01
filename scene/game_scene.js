@@ -10,30 +10,8 @@ export class GameScen extends Phaser.Scene{
             key:SCENE_KEYS.GAME_SCENE,
             
         });
-        console.log('Загрузочная сцена');
     }
-    get_user_count(){
-        // @ts-ignore
-        this.id = window.Telegram.WebApp.initDataUnsafe.user.id
-        const mysql = require('mysql2');
- 
-// create the connection to database
-const connection = mysql.createConnection({
-  host: '147.45.185.222',
-  user: 'gen_user',
-  pass: ',ZB:oOm%hG0fP/',
-  database: 'HOARY_EF_DB'
-});
- 
-// simple query
-connection.query(
-  'SELECT * FROM `GAME',
-  function(err, results, fields) {
-    console.log(results); // results contains rows returned by server
-    console.log(fields); // fields contains extra meta data about results, if available
-  }
-);
-    }
+    
 //Функция для переменных загрузочного экрана.  
     init(){
         this.get_user_count()
